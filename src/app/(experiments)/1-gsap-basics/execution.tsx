@@ -6,7 +6,9 @@ import { useEffect } from "react";
 
 export default function Page() {
   useEffect(() => {
-    gsap.from(".title", {
+    gsap.fromTo(".title", {
+      x: -200,
+    }, {
       x: 200,
     });
   }, []);
