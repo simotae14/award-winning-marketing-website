@@ -6,11 +6,17 @@ import { useEffect } from "react";
 
 export default function Page() {
   useEffect(() => {
-    gsap.fromTo(".title", {
-      x: -200,
-    }, {
+    const tween = gsap.to(".title", {
       x: 200,
+      duration: 10,
+      onUpdate: () => {
+        console.log("update");
+      }
     });
+
+    return () => {
+      tween.revert();
+    };
   }, []);
   return (
     <div className="bg-blue-300 text-black">
