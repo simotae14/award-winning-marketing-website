@@ -6,8 +6,8 @@ import { useEffect } from "react";
 
 export default function Page() {
   useEffect(() => {
-    gsap.to(".title", {
-      opacity: 0,
+    gsap.from(".title", {
+      x: 200,
     });
   }, []);
   return (
