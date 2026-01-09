@@ -26,16 +26,16 @@ export default function Page() {
   // }, []);
   
   useGSAP(() => {
-    gsap.to(".title", {
-      x: 200,
-      duration: 10,
+    gsap.from(".title", {
+      y: 200,
+      opacity: 0,
+      ease: "circ.out",
     });
   }, {
     scope: containerRef,
   });
   return (
     <div className="bg-blue-300 text-black">
-      <p className="title">Here</p>
       <div ref={containerRef} className="flex h-screen items-end justify-left overflow-hidden">
         <h1 className="title font-black text-[min(20rem,30vw)] leading-none pb-[0.1em] text-left">
           GSAP
