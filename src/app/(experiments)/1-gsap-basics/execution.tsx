@@ -1,29 +1,38 @@
 "use client";
 
 import gsap from "gsap";
-
-import { useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 export default function Page() {
   const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(".title", {
-        x: 200,
-        duration: 10,
-      });
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.to(".title", {
+  //       x: 200,
+  //       duration: 10,
+  //     });
 
-      gsap.from(".title", {
-        opacity: 200,
-        duration: 10,
-      });
-    }, containerRef);
+  //     gsap.from(".title", {
+  //       opacity: 200,
+  //       duration: 10,
+  //     });
+  //   }, containerRef);
     
 
-    return () => {
-      ctx.revert();
-    };
-  }, []);
+  //   return () => {
+  //     ctx.revert();
+  //   };
+  // }, []);
+  
+  useGSAP(() => {
+    gsap.to(".title", {
+      x: 200,
+      duration: 10,
+    });
+  }, {
+    scope: containerRef,
+  });
   return (
     <div className="bg-blue-300 text-black">
       <p className="title">Here</p>
