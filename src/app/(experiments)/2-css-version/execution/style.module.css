@@ -1,0 +1,15 @@
+.letter {
+  display: inline-block;
+  animation: reveal 0.4s ease-out;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
