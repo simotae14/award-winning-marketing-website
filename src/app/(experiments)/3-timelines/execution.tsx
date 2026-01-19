@@ -32,8 +32,14 @@ export default function Page() {
       duration: 0.2,
       stagger: 0.07,
       ease: "circ.out",
+    }, "-=0.5s");
 
-    });
+    tl.from(".title .word3 .char", {
+      y: "-100%",
+      duration: 0.3,
+      stagger: 0.07,
+      ease: "circ.out",
+    }, "-=0.5s");
   }, { scope: containerRef });
 
   return (
