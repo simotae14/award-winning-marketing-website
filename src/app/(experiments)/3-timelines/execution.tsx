@@ -18,11 +18,21 @@ export default function Page() {
       mask: "chars",
     });
 
-    gsap.from(".title .word1 .char", {
+    const tl = gsap.timeline();
+
+    tl.from(".title .word1 .char", {
       y: "100%",
       duration: 0.5,
       stagger: 0.07,
       ease: "circ.out",
+    });
+
+    tl.from(".title .word2 .char", {
+      x: "-100%",
+      duration: 0.2,
+      stagger: 0.07,
+      ease: "circ.out",
+
     });
   }, { scope: containerRef });
 
