@@ -29,7 +29,7 @@ function DescriptionSection() {
           trigger: "h2",
           start: "top center",
           end: "bottom center",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play reverse play reset",
           markers: true,
         },
       });
