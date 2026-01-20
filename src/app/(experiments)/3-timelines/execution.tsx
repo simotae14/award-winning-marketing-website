@@ -30,6 +30,14 @@ export default function Page() {
       ease: "circ.out",
     });
 
+    tl.to(".tl-dot", {
+      opacity: 0,
+      duration: 0.01,
+      repeat: 10,
+      yoyo: true,
+      repeatDelay: 0.05,
+    }, "<");
+
     tl.from(".title .word2 .char", {
       x: "-100%",
       duration: 0.2,
