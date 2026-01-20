@@ -34,6 +34,14 @@ export default function Page() {
       ease: "circ.out",
     }, "-=0.5s");
 
+    tl.from(".tl-start", {
+      height: 0,
+    }, "<");
+
+    tl.from(".tl-main", {
+      width: 0,
+    }, "<");
+
     tl.from(".title .word3 .char", {
       y: "-100%",
       duration: 0.3,
