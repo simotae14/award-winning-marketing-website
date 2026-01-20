@@ -43,7 +43,7 @@ export default function Page() {
 
     tl.from(".tl-main", {
       width: 0,
-    }, "<");
+    }, "<+0.2s");
 
     tl.from(".title .word3 .char", {
       y: "-100%",
