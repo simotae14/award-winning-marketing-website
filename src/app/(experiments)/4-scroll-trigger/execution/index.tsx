@@ -6,8 +6,10 @@ import { TitleSection } from "./title";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger, DrawSVGPlugin } from "gsap/all";
+
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
 
 export default function Page() {
   return (
@@ -37,6 +39,11 @@ function DescriptionSection() {
       tl.from("h2", {
         opacity: 0,
         duration: 1,
+      });
+
+      tl.from("path", {
+        drawSVG: 0,
+        stagger: 0.1,
       });
     },
     {
