@@ -3,9 +3,10 @@
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-import { SplitText } from "gsap/all";
+import { SplitText, GSDevTools } from "gsap/all";
 import gsap from "gsap";
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(GSDevTools);
 
 export default function Page() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,8 @@ export default function Page() {
     });
 
     const tl = gsap.timeline();
+
+    GSDevTools.create({ animation: tl });
 
     tl.from(".title .word1 .char", {
       y: "100%",
