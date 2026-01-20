@@ -29,7 +29,7 @@ function DescriptionSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "h2",
-          start: "top center",
+          start: "top 40%",
           end: "bottom center",
           toggleActions: "play reverse play reset",
           markers: true,
